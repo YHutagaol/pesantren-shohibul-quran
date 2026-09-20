@@ -5,13 +5,17 @@ on:
     branches: [ main ]
 
 jobs:
-  security-scan: 
+  security-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       
       - name: Jalankan Strix
-        run: curl -sSL https://strix.ai | bash
+        run: curl -sSL https://strix.ai/install | bash
         
       - name: Pindai Website
+        env:
+          STRIX_LLM: "vertex_ai/gemini-3-pro-preview"
+          LLM_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
         run: strix -n --target https://pesantren-shohibul-quran.vercel.app
