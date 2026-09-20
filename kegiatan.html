@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegiatan - Pesantren Markaz Shohibul Quran</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-sans text-gray-700 bg-gray-50 overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav id="navbar"
+        class="fixed w-full z-50 bg-white shadow-sm backdrop-blur-md transition-all duration-300 border-b border-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div id="navbar-container" class="flex justify-between items-center h-20 transition-all duration-300">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="https://placehold.co/50x50/22c55e/ffffff?text=Logo" alt="Logo Pesantren"
+                        class="h-10 w-10 rounded-full group-hover:scale-110 transition duration-300">
+                    <span
+                        class="font-bold text-xl text-dark hidden sm:block group-hover:text-primary transition duration-300">Markaz
+                        Shohibul Quran</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link text-gray-600 hover:text-primary transition relative">Beranda</a>
+                    <a href="tentang-kami.html"
+                        class="nav-link text-gray-600 hover:text-primary transition relative">Tentang Kami</a>
+
+                    <div class="relative dropdown group py-8">
+                        <a href="program.html"
+                            class="nav-link text-gray-600 hover:text-primary transition flex items-center gap-1 cursor-pointer">
+                            Program <i
+                                class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+                        <div
+                            class="dropdown-menu absolute hidden pt-6 top-full left-0 w-48 bg-white shadow-xl rounded-xl overflow-hidden z-50 border border-gray-100">
+                            <a href="program.html#smp"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">SMP</a>
+                            <a href="program.html#sma"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">SMA</a>
+                        </div>
+                    </div>
+
+                    <div class="relative dropdown group py-8">
+                        <a href="#"
+                            class="nav-link text-primary font-semibold transition flex items-center gap-1 cursor-pointer">
+                            Kegiatan <i
+                                class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+                        <div
+                            class="dropdown-menu absolute hidden pt-6 top-full left-0 w-56 bg-white shadow-xl rounded-xl overflow-hidden z-50 border border-gray-100">
+                            <a href="#berita"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Berita
+                                Pesantren</a>
+                            <a href="#tahfizh"
+                                class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Tahfizh</a>
+                        </div>
+                    </div>
+
+                    <a href="artikel.html"
+                        class="nav-link text-gray-600 hover:text-primary transition relative">Artikel</a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <a href="daftar.html"
+                        class="bg-primary hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 inline-block">
+                        Daftar
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-600 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-600 hover:text-primary">Beranda</a>
+                <a href="tentang-kami.html" class="text-gray-600 hover:text-primary">Tentang Kami</a>
+                <div class="border-t border-gray-50 pt-2">
+                    <span class="text-gray-400 text-sm font-semibold mb-2 block">Program</span>
+                    <a href="program.html#smp"
+                        class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">SMP</a>
+                    <a href="program.html#sma"
+                        class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">SMA</a>
+                </div>
+                <div class="border-t border-gray-50 pt-2">
+                    <span class="text-gray-400 text-sm font-semibold mb-2 block">Kegiatan</span>
+                    <a href="#berita"
+                        class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Berita
+                        Pesantren</a>
+                    <a href="#tahfizh"
+                        class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Tahfizh</a>
+                </div>
+                <a href="artikel.html" class="text-gray-600 hover:text-primary">Artikel</a>
+                <a href="daftar.html"
+                    class="bg-primary text-white text-center px-4 py-2 rounded-md font-medium mt-4">Daftar Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+
+        <div class="bg-primary text-white py-16 md:py-24 relative overflow-hidden reveal">
+            <div class="absolute inset-0 opacity-10">
+                <i class="fa-solid fa-mosque text-[20rem] absolute -bottom-10 -right-10 transform -rotate-12"></i>
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <span
+                    class="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-semibold tracking-widest uppercase mb-4 inline-block">Galeri
+                    & Informasi</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Kegiatan Pesantren</h1>
+                <p class="text-green-100 text-lg max-w-2xl mx-auto">Potret keseharian, rutinitas tahfizh, dan berbagai
+                    kabar terbaru dari lingkungan Markaz Shohibul Quran.</p>
+            </div>
+        </div>
+
+        <section id="berita" class="py-20 bg-gray-50 scroll-mt-24">
+            <div class="container mx-auto px-4 max-w-7xl reveal">
+                <div class="text-center mb-16">
+                    <span class="text-secondary font-semibold tracking-wider text-sm uppercase">Kabar Terbaru</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">Berita Pesantren</h2>
+                    <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col">
+                        <div class="h-56 bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Keseruan+Acara" alt="Berita"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <span
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">BAHASA</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h4
+                                    class="font-bold text-dark mb-3 line-clamp-2 group-hover:text-primary transition duration-300">
+                                    Kepoin Yuk! Keseruan Acara Qismul Lughah Bulan April 2026</h4>
+                                <p class="text-gray-500 text-sm line-clamp-2 mb-4">Acara berlangsung meriah diikuti
+                                    seluruh santri dengan berbagai perlombaan edukatif yang menyenangkan...</p>
+                            </div>
+                            <div class="flex items-center text-xs text-gray-400 font-medium">
+                                <i class="fa-regular fa-calendar mr-2"></i> Mei 3, 2026
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col delay-100 reveal">
+                        <div class="h-56 bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Kunjungan+Pemerintah" alt="Berita"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <span
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">BERITA</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h4
+                                    class="font-bold text-dark mb-3 line-clamp-2 group-hover:text-primary transition duration-300">
+                                    Pemerintah Kecamatan Dramaga Lakukan Silaturahim Ke PTQ</h4>
+                                <p class="text-gray-500 text-sm line-clamp-2 mb-4">Kunjungan ini dalam rangka mempererat
+                                    tali silaturahmi antar instansi dan peninjauan fasilitas pendidikan...</p>
+                            </div>
+                            <div class="flex items-center text-xs text-gray-400 font-medium">
+                                <i class="fa-regular fa-calendar mr-2"></i> Januari 8, 2026
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col delay-200 reveal md:col-span-2 lg:col-span-1">
+                        <div class="h-56 bg-gray-200 relative overflow-hidden">
+                            <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Panggung+Ekspresi" alt="Berita"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            <span
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-yellow-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">PRESTASI</span>
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <h4
+                                    class="font-bold text-dark mb-3 line-clamp-2 group-hover:text-primary transition duration-300">
+                                    'Ardhul Maharah: Panggung Ekspresi Bahasa dan Apresiasi</h4>
+                                <p class="text-gray-500 text-sm line-clamp-2 mb-4">Malam puncak penganugerahan santri
+                                    berprestasi dalam bidang akademik maupun hafalan Al-Qur'an...</p>
+                            </div>
+                            <div class="flex items-center text-xs text-gray-400 font-medium mt-4">
+                                <i class="fa-regular fa-calendar mr-2"></i> Desember 19, 2025
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tahfizh" class="py-20 bg-white scroll-mt-24 border-t border-gray-200">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 reveal-left">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://placehold.co/400x500/e2e8f0/64748b?text=Tahfizh+1" alt="Tahfizh"
+                                class="rounded-2xl shadow-lg w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                            <div class="grid grid-rows-2 gap-4">
+                                <img src="https://placehold.co/400x240/cbd5e1/475569?text=Muroja'ah" alt="Tahfizh"
+                                    class="rounded-2xl shadow-lg w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                                <img src="https://placehold.co/400x240/94a3b8/1e293b?text=Tasmi'" alt="Tahfizh"
+                                    class="rounded-2xl shadow-lg w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 reveal-right">
+                        <span
+                            class="bg-green-50 text-primary px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase mb-4 inline-block">Program
+                            Unggulan</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-6">Program Tahfizh Al-Qur'an</h2>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Mencetak generasi penghafal Al-Qur'an yang mutqin (kuat hafalannya) dan bersanad adalah ruh
+                            utama dari Markaz Shohibul Quran. Kegiatan ini dibina langsung oleh para muhaffizh yang
+                            berpengalaman.
+                        </p>
+
+                        <div class="space-y-4 mb-8">
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark">Ziyadah (Setoran Baru)</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Jadwal khusus menyetorkan hafalan ayat-ayat
+                                        baru yang telah dihafal secara mandiri oleh santri setiap harinya.</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark">Muroja'ah (Pengulangan)</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Kegiatan mengulang hafalan lama agar hafalan
+                                        tetap menancap kuat (Mutqin) dan tidak mudah hilang.</p>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                                    <i class="fa-solid fa-microphone-lines"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-dark">Tasmi' & Ujian Juz</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Pembacaan Al-Qur'an bil ghoib (tanpa melihat
+                                        mushaf) yang disimak oleh asatidzah untuk menguji kelayakan kenaikan juz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white pt-20 pb-10 mt-auto">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="index.html"
+                        class="flex items-center gap-3 mb-6 bg-white/10 p-3 rounded-xl inline-flex backdrop-blur-sm">
+                        <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full">
+                        <span class="font-bold text-xl text-white">Pesantren</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Menjadi Lembaga Pendidikan yang Unggul Di Nusantara Dalam Melahirkan Penghafal Al-Qur'an.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Menu Pintas
+                    </h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-primary transition-all">Beranda</a></li>
+                        <li><a href="tentang-kami.html" class="hover:text-primary transition-all">Tentang Kami</a></li>
+                        <li><a href="program.html" class="hover:text-primary transition-all">Program</a></li>
+                        <li><a href="kegiatan.html" class="hover:text-primary transition-all">Kegiatan</a></li>
+                        <li><a href="artikel.html" class="hover:text-primary transition-all">Artikel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Alamat</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex gap-4 items-start">
+                            <i class="fa-solid fa-location-dot text-primary pt-1"></i>
+                            <span>Jl. Kampung Lebak Nangka RT 06/06 Desa Petir Kec. Dramaga Kab. Bogor</span>
+                        </li>
+                        <li class="flex gap-4 items-center">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <span>+62 822 1000 0242</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Newsletter
+                    </h4>
+                    <form class="flex border border-white/20 rounded-lg overflow-hidden">
+                        <input type="email" placeholder="Email Anda..."
+                            class="w-full px-4 py-3 outline-none text-sm bg-white/5 text-white">
+                        <button type="button" class="bg-primary text-white px-5 py-3"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-white/10 text-sm text-gray-500">
+                &copy; 2026 Markaz Shohibul Quran. Didesain untuk Pendidikan.
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn"
+        class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-600 hover:shadow-xl hover:-translate-y-1 flex items-center justify-center text-lg z-50 transition-all duration-300">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

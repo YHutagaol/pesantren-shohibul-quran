@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Pendidikan - Markaz Shohibul Quran (MSQ)</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav id="navbar" class="fixed w-full z-50 bg-white shadow-sm backdrop-blur-md transition-all duration-300 border-b border-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div id="navbar-container" class="flex justify-between items-center h-20 transition-all duration-300">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="logo.png" alt="Logo MSQ" class="w-10 h-10 object-contain group-hover:scale-110 transition duration-300">
+                    <span class="font-bold text-xl text-dark hidden sm:block group-hover:text-primary transition duration-300">Markaz Shohibul Quran</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary transition relative">Beranda</a>
+                    <a href="tentang-kami.html" class="nav-link text-gray-600 hover:text-primary transition relative">Tentang Kami</a>
+                    
+                    <div class="relative dropdown group py-8">
+                        <a href="program.html" class="nav-link text-primary font-semibold transition flex items-center gap-1 cursor-pointer">
+                            Program <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+                        <div class="dropdown-menu absolute hidden pt-6 top-full left-0 w-56 bg-white shadow-xl rounded-xl overflow-hidden z-50 border border-gray-100">
+                            <a href="#smp" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Salafiyah Wustho (SMP)</a>
+                            <a href="#sma" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Salafiyah Ulya (SMA)</a>
+                        </div>
+                    </div>
+
+                    <div class="relative dropdown group py-8">
+                        <a href="kegiatan.html" class="nav-link text-gray-600 hover:text-primary transition flex items-center gap-1 cursor-pointer">
+                            Kegiatan <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+                        <div class="dropdown-menu absolute hidden pt-6 top-full left-0 w-56 bg-white shadow-xl rounded-xl overflow-hidden z-50 border border-gray-100">
+                            <a href="kegiatan.html#berita" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Berita Pesantren</a>
+                            <a href="kegiatan.html#tahfizh" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Tahfizh & Ekstrakurikuler</a>
+                        </div>
+                    </div>
+
+                    <a href="artikel.html" class="nav-link text-gray-600 hover:text-primary transition relative">Artikel</a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <a href="daftar.html" class="bg-primary hover:bg-green-600 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 inline-block">
+                        Daftar
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-600 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-600 hover:text-primary">Beranda</a>
+                <a href="tentang-kami.html" class="text-gray-600 hover:text-primary">Tentang Kami</a>
+                <div class="border-t border-gray-50 pt-2">
+                    <span class="text-gray-400 text-sm font-semibold mb-2 block">Program</span>
+                    <a href="#smp" class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Salafiyah Wustho (SMP)</a>
+                    <a href="#sma" class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Salafiyah Ulya (SMA)</a>
+                </div>
+                <a href="artikel.html" class="text-gray-600 hover:text-primary">Artikel</a>
+                <a href="daftar.html" class="bg-primary text-white text-center px-4 py-2 rounded-md font-medium mt-4">Daftar Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-20">
+        
+        <div class="bg-primary text-white py-16 md:py-24 relative overflow-hidden reveal">
+            <div class="absolute inset-0 opacity-10">
+                <i class="fa-solid fa-graduation-cap text-[20rem] absolute -bottom-10 -right-10 transform -rotate-12"></i>
+            </div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <span class="bg-white/20 text-white px-4 py-1 rounded-full text-sm font-semibold tracking-widest uppercase mb-4 inline-block">Akademik</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Program Pendidikan</h1>
+                <p class="text-green-100 text-lg max-w-2xl mx-auto">Membentuk pribadi putra yang bertakwa, menguasai ilmu syar'i, dan adaptif terhadap teknologi informasi global.</p>
+            </div>
+        </div>
+
+        <section id="smp" class="py-20 bg-white scroll-mt-24">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2 reveal-left">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-primary rounded-3xl transform -rotate-3 scale-105 opacity-20"></div>
+                            <img src="https://placehold.co/600x450/e2e8f0/64748b?text=Salafiyah+Wustho" alt="Program SMP" class="relative rounded-3xl shadow-xl z-10 w-full object-cover aspect-[4/3]">
+                            <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl z-20 hidden md:block border border-gray-100">
+                                <i class="fa-solid fa-hotel text-4xl text-primary"></i>
+                                <p class="font-bold text-dark mt-2">Boarding & Full Day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 reveal-right">
+                        <span class="text-primary font-bold tracking-widest text-sm uppercase">Setingkat SMP • Khusus Putra</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-6">Salafiyah Wustho</h2>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Program pendidikan tingkat menengah pertama yang difokuskan pada penguatan dasar aqidah Ahlus Sunnah wal Jama'ah, perbaikan bacaan dan hafalan Al-Qur'an (Tahsin & Tahfizh), serta pembiasaan karakter akhlak mulia sejak usia remaja.
+                        </p>
+                        
+                        <h4 class="font-bold text-dark mb-4 border-b pb-2">Target Pendidikan Utama:</h4>
+                        <ul class="space-y-4 text-gray-600 mb-8">
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-circle-check text-secondary mt-1"></i>
+                                <div>
+                                    <strong class="text-dark block">Aqidah Berdasarkan Pemahaman Salafus Shalih</strong>
+                                    <span class="text-sm">Menanamkan pondasi keyakinan keagamaan yang bersih dari penyimpangan.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid =fa-circle-check text-secondary mt-1"></i>
+                                <div>
+                                    <strong class="text-dark block">Karakter & Etika Islami</strong>
+                                    <span class="text-sm">Menekankan pembiasaan adab menuntut ilmu dan kesantunan bertingkah laku sehari-hari.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-circle-check text-secondary mt-1"></i>
+                                <div>
+                                    <strong class="text-dark block">Kurikulum Diknas Resmi</strong>
+                                    <span class="text-sm">Tetap mendapatkan materi pengajaran umum nasional dan lulus dengan ijazah negara resmi.</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <a href="daftar.html" class="inline-flex items-center gap-2 bg-primary hover:bg-green-700 text-white px-6 py-3 rounded-xl font-medium transition shadow-lg transform hover:-translate-y-1">
+                            Info Pendaftaran Wustho <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sma" class="py-20 bg-gray-50 scroll-mt-24 border-t border-gray-200">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                    <div class="lg:w-1/2 reveal-right">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-secondary rounded-3xl transform rotate-3 scale-105 opacity-20"></div>
+                            <img src="https://placehold.co/600x450/e2e8f0/64748b?text=Salafiyah+Ulya" alt="Program SMA" class="relative rounded-3xl shadow-xl z-10 w-full object-cover aspect-[4/3]">
+                            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl z-20 hidden md:block border border-gray-100">
+                                <i class="fa-solid fa-desktop text-4xl text-secondary"></i>
+                                <p class="font-bold text-dark mt-2">Melek Teknologi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 reveal-left">
+                        <span class="text-secondary font-bold tracking-widest text-sm uppercase">Setingkat SMA • Khusus Putra</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-6">Salafiyah Ulya</h2>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Program lanjutan atas yang mematangkan kesiapan santri untuk menjadi imam dan da'i di tengah masyarakat. Selain pendalaman ilmu syar'i dan hafalan Matan Tholabul Ilmi, santri dibekali kompetensi teknologi informasi agar mampu berdakwah secara modern dan bijak.
+                        </p>
+                        
+                        <h4 class="font-bold text-dark mb-4 border-b pb-2">Target & Keunggulan Lulusan:</h4>
+                        <ul class="space-y-4 text-gray-600 mb-8">
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1"></i>
+                                <div>
+                                    <strong class="text-dark block">Kesiapan Menjadi Imam & Da'i</strong>
+                                    <span class="text-sm">Melatih santri agar memiliki kematangan bacaan dan rasa percaya diri berdakwah di lingkungan sosial.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1"></i>
+                                <div>
+                                    <strong class="text-dark block">Penghafal Matan Ilmu Din</strong>
+                                    <span class="text-sm">Menghafalkan matan-matan ilmiah ringkas sebagai kunci pembuka pemahaman ilmu syariat secara terstruktur.</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <i class="fa-solid fa-circle-check text-primary mt-1"></i>
+                                <div>
+                                    <strong class="text-dark block">Integrasi Ilmu IPTEK</strong>
+                                    <span class="text-sm">Program praktek komputer dan pemanfaatan media informasi digital secara sehat dan kreatif.</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="daftar.html" class="inline-flex items-center gap-2 bg-secondary hover:bg-yellow-600 text-white px-6 py-3 rounded-xl font-medium transition shadow-lg transform hover:-translate-y-1">
+                            Info Pendaftaran Ulya <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white pt-20 pb-10 mt-auto">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-6 bg-white/10 p-3 rounded-xl inline-flex backdrop-blur-sm">
+                        <img src="logo.png" alt="Logo MSQ" class="w-12 h-12 object-contain bg-white rounded-full p-1">
+                        <span class="font-bold text-xl text-white">Markaz Shohibul Quran</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Terbentuknya generasi Shohibul qur'an yang berakhlak mulia serta unggul dalam ilmu pengetahuan & teknologi.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Menu Pintas</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-secondary transition-all">Beranda</a></li>
+                        <li><a href="tentang-kami.html" class="hover:text-secondary transition-all">Tentang Kami</a></li>
+                        <li><a href="program.html" class="hover:text-secondary transition-all">Program</a></li>
+                        <li><a href="artikel.html" class="hover:text-secondary transition-all">Artikel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Alamat</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex gap-4 items-start">
+                            <i class="fa-solid fa-location-dot text-secondary pt-1"></i>
+                            <span>Jl. Asoka Raya No.18, RT.02/RW.09, Cibinong, Kec. Gn. Sindur, Kab. Bogor 16340</span>
+                        </li>
+                        <li class="flex gap-4 items-center">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            <span>0858 9345 2015 (Admin / Survey)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Pendaftaran Online</h4>
+                    <a href="https://lynk.id/msqofficial" target="_blank" class="block text-center bg-secondary hover:bg-yellow-600 text-white px-5 py-3 text-sm font-medium rounded-lg transition shadow-md">
+                        Mulai Daftar PPDB
+                    </a>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-white/10 text-sm text-gray-500">
+                &copy; 2026 Yayasan Ubay Bin Ka'ab Ash Shohaby - Markaz Shohibul Quran (MSQ).
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hover:bg-yellow-600 hover:shadow-xl hover:-translate-y-1 flex items-center justify-center text-lg z-50 transition-all duration-300">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

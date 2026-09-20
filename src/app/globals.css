@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+}
+
+@theme {
+  --color-primary: #15803d; /* Hijau tua MSQ */
+  --color-secondary: #d97706; /* Emas/Kuning MSQ */
+  --color-dark: #1e293b;
+  
+  --font-sans: 'Poppins', sans-serif;
+  --font-arabic: 'Amiri', serif;
+  
+  --animate-ken-burns: kenBurns 15s infinite alternate linear;
+  --animate-fade-in: fadeIn 0.5s forwards;
+  --animate-slide-up: slideUp 0.3s ease;
+}
+
+/* Base body styles */
+body {
+  font-family: var(--font-sans);
+  color: #374151; /* gray-700 */
+  background-color: #f9fafb; /* gray-50 */
+}
+
+/* Custom CSS from original style.css */
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.5s forwards; }
+
+.faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+.faq-item.active .faq-icon { transform: rotate(45deg); color: #22c55e; }
+.faq-item.active { border-color: #22c55e; }
+
+.dropdown:hover .dropdown-menu { display: block; animation: slideUp 0.3s ease; }
+
+/* Scroll Reveal classes */
+.reveal-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.reveal-left-active {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+.reveal-right-active {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+#scrollTopBtn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sketch-circle { position: relative; display: inline-block; }
+.sketch-circle::after {
+  content: ''; position: absolute;
+  top: -10%; left: -10%; right: -10%; bottom: -10%;
+  border: 3px solid #22c55e;
+  border-radius: 50% 50% 50% 40% / 40% 50% 50% 60%;
+  transform: rotate(-3deg); pointer-events: none;
+}

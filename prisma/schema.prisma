@@ -1,0 +1,69 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String   // Hashed password
+  createdAt DateTime @default(now())
+}
+
+model CalonSantri {
+  id               Int      @id @default(autoincrement())
+  nomor_daftar     String   @unique
+  nama_lengkap     String
+  nisn             String?
+  tempat_lahir     String
+  tanggal_lahir    DateTime
+  asal_sekolah     String
+  nama_ortu        String
+  no_wa            String
+  program_pilihan  String   
+  tipe_asrama      String   
+  berkas_foto      String?
+  berkas_akte      String?
+  berkas_kk        String?
+  berkas_sehat     String?
+  berkas_nisn      String?
+  berkas_raport    String?
+  bukti_transfer   String?
+  status_daftar    String   @default("PENDING") 
+  createdAt        DateTime @default(now())
+}
+
+model Article {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  category    String   @default("Berita")
+  excerpt     String   @db.Text
+  content     String   @db.LongText
+  thumbnail   String?
+  publishedAt DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TahfizhProgram {
+  id          Int      @id @default(autoincrement())
+  title       String   // Contoh: "Ziyadah (Setoran Baru)"
+  description String   @db.Text
+  icon        String?  // Class icon fontawesome atau URL gambar
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Gallery {
+  id          Int      @id @default(autoincrement())
+  imageUrl    String   // URL dari cloud storage atau path lokal
+  caption     String?
+  createdAt   DateTime @default(now())
+}

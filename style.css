@@ -1,0 +1,47 @@
+/* style.css */
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.5s forwards; }
+.faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+.faq-item.active .faq-icon { transform: rotate(45deg); color: #22c55e; }
+.faq-item.active { border-color: #22c55e; }
+.dropdown:hover .dropdown-menu { display: block; animation: slideUp 0.3s ease; }
+
+/* Animasi Scroll Reveal */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+.reveal-left.active { opacity: 1; transform: translateX(0); }
+.reveal-right { opacity: 0; transform: translateX(50px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+.reveal-right.active { opacity: 1; transform: translateX(0); }
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Animasi Hero */
+.hero-bg-anim { animation: kenBurns 15s infinite alternate linear; }
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes kenBurns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+#scrollTopBtn { opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; }
+#scrollTopBtn.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+.sketch-circle { position: relative; display: inline-block; }
+.sketch-circle::after {
+    content: ''; position: absolute;
+    top: -10%; left: -10%; right: -10%; bottom: -10%;
+    border: 3px solid #22c55e;
+    border-radius: 50% 50% 50% 40% / 40% 50% 50% 60%;
+    transform: rotate(-3deg); pointer-events: none;
+}

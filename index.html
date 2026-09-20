@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Markaz Shohibul Quran (MSQ)</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-700 bg-gray-50 overflow-x-hidden flex flex-col min-h-screen">
+
+    <nav id="navbar" class="fixed w-full z-50 bg-white shadow-sm backdrop-blur-md transition-all duration-300 border-b border-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div id="navbar-container" class="flex justify-between items-center h-20 transition-all duration-300">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img src="logo.png" alt="Logo MSQ" class="w-10 h-10 object-contain group-hover:scale-110 transition duration-300">
+                    <span class="font-bold text-xl text-dark hidden sm:block group-hover:text-primary transition duration-300">Markaz Shohibul Quran</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-primary font-semibold relative hover:text-primary transition">Beranda</a>
+                    <a href="tentang-kami.html" class="nav-link text-gray-600 hover:text-primary transition relative">Tentang Kami</a>
+                    
+                    <div class="relative dropdown group py-8">
+                        <a href="program.html" class="nav-link text-gray-600 hover:text-primary transition flex items-center gap-1 cursor-pointer">
+                            Program <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+                        <div class="dropdown-menu absolute hidden pt-6 top-full left-0 w-56 bg-white shadow-xl rounded-xl overflow-hidden z-50 border border-gray-100">
+                            <a href="program.html#smp" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Salafiyah Wustho (SMP)</a>
+                            <a href="program.html#sma" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Salafiyah Ulya (SMA)</a>
+                        </div>
+                    </div>
+
+                    <div class="relative dropdown group py-8">
+                        <a href="kegiatan.html" class="nav-link text-gray-600 hover:text-primary transition flex items-center gap-1 cursor-pointer">
+                            Kegiatan <i class="fa-solid fa-chevron-down text-xs group-hover:rotate-180 transition-transform duration-300"></i>
+                        </a>
+                        <div class="dropdown-menu absolute hidden pt-6 top-full left-0 w-56 bg-white shadow-xl rounded-xl overflow-hidden z-50 border border-gray-100">
+                            <a href="kegiatan.html#berita" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Berita Pesantren</a>
+                            <a href="kegiatan.html#tahfizh" class="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-primary transition-all duration-300">Tahfizh & Ekstrakurikuler</a>
+                        </div>
+                    </div>
+
+                    <a href="artikel.html" class="nav-link text-gray-600 hover:text-primary transition relative">Artikel</a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <a href="daftar.html" class="bg-primary hover:bg-green-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md shadow-green-200 hover:shadow-lg hover:-translate-y-0.5 inline-block">
+                        Daftar
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-600 text-2xl focus:outline-none hover:text-primary transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-primary font-semibold">Beranda</a>
+                <a href="tentang-kami.html" class="text-gray-600 hover:text-primary">Tentang Kami</a>
+                <div class="border-t border-gray-50 pt-2">
+                    <span class="text-gray-400 text-sm font-semibold mb-2 block">Program</span>
+                    <a href="program.html#smp" class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Salafiyah Wustho (SMP)</a>
+                    <a href="program.html#sma" class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Salafiyah Ulya (SMA)</a>
+                </div>
+                <div class="border-t border-gray-50 pt-2">
+                    <span class="text-gray-400 text-sm font-semibold mb-2 block">Kegiatan</span>
+                    <a href="kegiatan.html#berita" class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Berita Pesantren</a>
+                    <a href="kegiatan.html#tahfizh" class="block text-gray-600 py-1 pl-4 hover:text-primary hover:bg-gray-50 rounded">Tahfizh</a>
+                </div>
+                <a href="artikel.html" class="text-gray-600 hover:text-primary">Artikel</a>
+                <a href="daftar.html" class="bg-primary text-white text-center px-4 py-2 rounded-md font-medium mt-4">Daftar Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <section class="relative pt-20 overflow-hidden">
+            <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pt-20">
+                <div class="w-full h-[60vh] md:h-[80vh] bg-cover bg-center hero-bg-anim scale-105" style="background-image: url('https://placehold.co/1920x1080/1e293b/1e293b');"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+            </div>
+            
+            <div class="w-full h-[60vh] md:h-[80vh] relative z-10 flex flex-col justify-center pb-20 px-4 text-center text-white">
+                <span class="bg-secondary text-white px-5 py-1.5 rounded-full text-xs md:text-sm font-bold tracking-widest uppercase mx-auto mb-4 shadow-lg reveal">Yayasan Ubay Bin Ka'ab Ash Shohaby</span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 reveal delay-100">Markaz Shohibul Qur'an <span class="text-secondary">(MSQ)</span></h1>
+                <p class="text-lg md:text-xl text-gray-200 reveal delay-200 max-w-3xl mx-auto mb-8">Terbentuknya generasi Shohibul Qur'an yang berakhlak mulia serta unggul dalam ilmu pengetahuan & teknologi.</p>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-md shadow-2xl mx-4 md:mx-auto md:w-4/5 lg:w-3/4 -mt-16 relative z-20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 border border-white reveal delay-300 group hover:bg-white transition duration-500">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-dark group-hover:text-primary transition duration-300">Penerimaan Murid Baru (SPMB)</h2>
+                    <p class="text-xl md:text-2xl text-secondary font-semibold mt-1">Tahun Ajaran 2026 - 2027</p>
+                </div>
+                <a href="https://lynk.id/msqofficial" target="_blank" class="bg-primary hover:bg-green-700 text-white px-8 py-3.5 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 whitespace-nowrap shadow-lg shadow-green-200 hover:shadow-green-300 hover:-translate-y-1">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Daftar Sekarang
+                </a>
+            </div>
+        </section>
+
+        <section class="py-12 bg-gray-50 reveal">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-gray-500 font-medium mb-8 uppercase tracking-widest text-sm">Fasilitas Penunjang Santri</p>
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 text-gray-400 font-medium text-sm md:text-base">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-mosque text-primary text-xl"></i> Masjid</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-snowflake text-primary text-xl"></i> Asrama & Kelas Ber-AC</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-users-rectangle text-primary text-xl"></i> Aula</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-futbol text-primary text-xl"></i> Lapangan Olahraga</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-desktop text-primary text-xl"></i> Ruang Komputer</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-shirt text-primary text-xl"></i> Laundry</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 lg:px-16">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-5 lg:col-span-4 relative reveal-left group">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl relative z-10">
+                            <img src="https://placehold.co/600x800/cbd5e1/1e293b?text=Ust+Dani+Abu+Abdillah" alt="Mudir MSQ" class="w-full h-auto object-cover group-hover:scale-105 transition duration-700">
+                        </div>
+                        <div class="absolute top-5 -right-5 w-full h-full border-4 border-secondary/30 rounded-2xl z-0 group-hover:top-3 group-hover:-right-3 transition-all duration-500"></div>
+                    </div>
+                    
+                    <div class="md:col-span-7 lg:col-span-8 reveal-right">
+                        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6 relative inline-block">
+                            Sambutan Mudir MSQ
+                            <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-secondary rounded-full"></span>
+                        </h2>
+                        
+                        <div class="prose prose-lg text-gray-600 text-justify mt-4">
+                            <p class="text-center font-arabic text-xl mb-4 text-gray-800 bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-inner" dir="rtl">
+                                بسم الله الرحمن الرحيم<br>
+                                <span class="text-base text-gray-600">الحمد لله رب العالمين ، والصلاة والسلام على أشرف الأنبياء والمرسلin نبينا محمد و على آله و أصحابه أجمعين.</span>
+                            </p>
+                            <p class="mb-4 leading-relaxed">
+                                Markaz Shohibul Qur'an (MSQ) hadir sebagai wadah pendidikan yang memadukan nilai-nilai Islam sesuai pemahaman Salafus Shalih dengan perkembangan teknologi. Kami berkomitmen untuk mendidik generasi putra yang tidak hanya melek informasi, tetapi juga memiliki hafalan yang kuat, akhlak yang mulia, dan siap terjun berdakwah di tengah umat.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 flex items-center gap-4">
+                            <div class="w-12 h-1 bg-primary rounded-full"></div>
+                            <div>
+                                <p class="font-bold text-dark text-lg">Ust. Dani Abu Abdillah, S.Pd</p>
+                                <p class="text-sm text-primary font-medium">Mudir Markaz Shohibul Qur'an</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 lg:px-16 text-center reveal">
+                <div class="mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">Profil & Target Unggulan</h2>
+                    <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+                    <button class="tab-link active px-6 py-3 rounded-full font-medium transition-all duration-300 bg-primary text-white shadow-lg shadow-green-200 transform hover:-translate-y-1" onclick="openTab(event, 'visi')">Visi & Misi</button>
+                    <button class="tab-link px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-gray-600 hover:text-primary hover:shadow-md border border-gray-200 transform hover:-translate-y-1" onclick="openTab(event, 'keunggulan')">Keunggulan Santri</button>
+                    <button class="tab-link px-6 py-3 rounded-full font-medium transition-all duration-300 bg-white text-gray-600 hover:text-primary hover:shadow-md border border-gray-200 transform hover:-translate-y-1" onclick="openTab(event, 'ekskul')">Ekstrakurikuler</button>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto">
+                    <div id="visi" class="tab-content active bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+                        <div class="w-16 h-16 bg-green-50 text-primary text-3xl rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <p class="text-xl md:text-2xl text-dark font-medium leading-relaxed italic">
+                            "Terbentuknya generasi Shohibul Qur'an yang berakhlak mulia serta unggul dalam ilmu pengetahuan & teknologi."
+                        </p>
+                    </div>
+                    <div id="keunggulan" class="tab-content bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 text-left">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <ul class="space-y-4 text-gray-600 list-none">
+                                <li class="flex gap-3 items-start">
+                                    <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                    <span>Aqidah Ahlus Sunnah wal Jamaah sesuai pemahaman Salafus Shalih.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                    <span>Memiliki karakter akhlak yang mulia.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                    <span>Mendapatkan ijazah diknas resmi.</span>
+                                </li>
+                            </ul>
+                            <ul class="space-y-4 text-gray-600 list-none">
+                                <li class="flex gap-3 items-start">
+                                    <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                    <span>Bacaan Al-Qur'an yang baik, siap menjadi imam & berdakwah.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                    <span>Menghapal Matan Tholabul Ilmi.</span>
+                                </li>
+                                <li class="flex gap-3 items-start">
+                                    <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                    <span>Santri yang melek teknologi & informasi.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ekskul" class="tab-content bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
+                        <div class="flex flex-wrap justify-center gap-4 text-primary font-medium">
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-book-quran mr-2"></i>Tahsin Al-Qur'an</span>
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-computer mr-2"></i>Komputer</span>
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-futbol mr-2"></i>Futsal</span>
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-table-tennis-paddle-ball mr-2"></i>Bulu Tangkis</span>
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-bullseye mr-2"></i>Memanah</span>
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-basketball mr-2"></i>Basket</span>
+                            <span class="bg-green-50 px-4 py-2 rounded-lg"><i class="fa-solid fa-hand-fist mr-2"></i>Bela Diri</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-secondary font-semibold tracking-wider text-sm uppercase">Khusus Putra</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mt-2 mb-4">Program Pendidikan</h2>
+                    <p class="text-gray-500">Tersedia pilihan <strong>Boarding School</strong> (Berasrama) dan <strong>Full Day</strong> (Pulang Pergi).</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="reveal group relative bg-white border border-gray-100 rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-8 text-primary text-3xl group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark mb-2">Salafiyah Wustho</h3>
+                            <p class="text-primary font-medium mb-4 text-sm uppercase tracking-wide">Setingkat SMP</p>
+                            <p class="text-gray-500 mb-8 text-sm">Program pendidikan menengah pertama khusus putra dengan penanaman aqidah dan hafalan yang kuat.</p>
+                            <a href="program.html#smp" class="inline-block bg-gray-50 hover:bg-primary text-gray-700 hover:text-white font-medium px-8 py-3 rounded-xl transition duration-300 w-full group-hover:shadow-md">Lihat Detail</a>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-100 group relative bg-white border border-gray-100 rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-yellow-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10">
+                            <div class="w-20 h-20 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-8 text-secondary text-3xl group-hover:bg-secondary group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-sm">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-dark mb-2">Salafiyah Ulya</h3>
+                            <p class="text-secondary font-medium mb-4 text-sm uppercase tracking-wide">Setingkat SMA</p>
+                            <p class="text-gray-500 mb-8 text-sm">Program lanjutan atas khusus putra untuk mencetak santri melek teknologi & ilmu syar'i.</p>
+                            <a href="program.html#sma" class="inline-block bg-gray-50 hover:bg-secondary text-gray-700 hover:text-white font-medium px-8 py-3 rounded-xl transition duration-300 w-full group-hover:shadow-md">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-primary relative overflow-hidden text-center reveal">
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+                <i class="fa-solid fa-book-open text-[30rem] absolute -top-20 -left-20 transform -rotate-12"></i>
+                <i class="fa-solid fa-moon text-[20rem] absolute bottom-10 -right-10 transform rotate-12"></i>
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <span class="text-white/80 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">SEGERA DAFTAR</span>
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">Penerimaan Murid Baru (SPMB)</h2>
+                <p class="text-green-100 text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Tahun Ajaran 2026-2027 telah dibuka.</p>
+                <a href="https://lynk.id/msqofficial" target="_blank" class="inline-flex items-center gap-3 bg-white text-primary hover:bg-gray-50 font-bold px-10 py-4 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg">
+                    Daftar Sekarang <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white pt-20 pb-10 mt-auto">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div>
+                    <a href="index.html" class="flex items-center gap-3 mb-6 bg-white/10 p-3 rounded-xl inline-flex backdrop-blur-sm">
+                        <img src="logo.png" alt="Logo MSQ" class="w-12 h-12 object-contain bg-white rounded-full p-1">
+                        <span class="font-bold text-xl text-white">Markaz Shohibul Quran</span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Terbentuknya generasi Shohibul qur'an yang berakhlak mulia serta unggul dalam ilmu pengetahuan & teknologi.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/markazshohibulquran.official" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Menu Pintas</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-secondary transition-all">Beranda</a></li>
+                        <li><a href="tentang-kami.html" class="hover:text-secondary transition-all">Tentang Kami</a></li>
+                        <li><a href="program.html" class="hover:text-secondary transition-all">Program</a></li>
+                        <li><a href="artikel.html" class="hover:text-secondary transition-all">Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex gap-4 items-start">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                            <span class="pt-1">Jl. Asoka Raya No.18, RT.02/RW.09, Cibinong, Kec. Gn. Sindur, Kab. Bogor 16340</span>
+                        </li>
+                        <li class="flex gap-4 items-center">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-secondary shrink-0"><i class="fa-solid fa-phone"></i></div>
+                            <span>0858 9345 2015 (Admin)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6 border-b border-white/10 pb-3 inline-block">Pendaftaran Baru</h4>
+                    <p class="text-sm text-gray-400 mb-4">Daftarkan putra Anda secara online melalui link resmi kami.</p>
+                    <a href="https://lynk.id/msqofficial" target="_blank" class="block text-center bg-secondary hover:bg-yellow-600 text-white px-5 py-3 text-sm font-medium rounded-lg transition">
+                        Link Pendaftaran MSQ
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="text-center pt-8 border-t border-white/10 text-sm text-gray-500">
+                &copy; 2026 Yayasan Ubay Bin Ka'ab Ash Shohaby - Markaz Shohibul Quran (MSQ).
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-secondary text-white w-12 h-12 rounded-full shadow-lg hover:bg-yellow-600 hover:shadow-xl hover:-translate-y-1 flex items-center justify-center text-lg z-50 transition-all duration-300">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
